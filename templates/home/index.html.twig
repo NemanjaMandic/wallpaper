@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+
+    <h1>Abstract Images</h1>
+
+
+    {#{% include 'home/best-in-category.html.twig' with {'image': abstract } only %}#}
+
+    <div class="row">
+
+        {% for image in abstract %}
+            <div class="col-sm-12 col-md-6">
+                <div class="thumbnail">
+                    <img src="img/{{ image }}" class="img-fluid img-thumbnail"/>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <h1>Summer Images</h1>
+    <div class="row">
+
+        {% for image in summer %}
+            <div class="col-sm-12 col-md-6">
+                <div class="thumbnail">
+                    <img src="img/{{ image }}" class="img-fluid img-thumbnail"/>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <h1>Winter Images</h1>
+    <div class="row">
+
+        {% for image in winter %}
+            <div class="col-sm-12 col-md-6">
+                <div class="thumbnail">
+                    <img src="img/{{ image }}" class="img-fluid img-thumbnail"/>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+    <h2>Randomized Images</h2>
+
+    <div class="row">
+        {% for image in randomized_images %}
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/{{ image }}" class="img-fluid img-thumbnail"/>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
