@@ -23,13 +23,13 @@ class Category
      */
     private $name;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Wallpaper", mappedBy="category")
-     */
-    private $wallpapers;
+//    /**
+//     * @ORM\OneToMany(targetEntity="App\Entity\Wallpaper", mappedBy="category")
+//     */
+//    private $wallpapers;
 
     public function __construct(){
-        $this->wallpapers = new ArrayCollection();
+        //$this->wallpapers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -49,12 +49,9 @@ class Category
         return $this;
     }
 
-    /**
-     * @return Collection|Wallpaper[]
-     */
-    public function getWallpapers(): Collection
+    public function __toString()
     {
-        return $this->wallpapers;
+        return $this->name;
     }
 
 

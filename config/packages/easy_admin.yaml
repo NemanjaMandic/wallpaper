@@ -1,6 +1,20 @@
 easy_admin:
     entities:
         # List the entity class name you want to manage
-        - App\Entity\Wallpaper
-        - App\Entity\Category
+        Category:
+            class: App\Entity\Category
+
+        Wallpaper:
+            class: App\Entity\Wallpaper
+            list:
+                fields:
+                    - "id"
+                    - "filename"
+                    - "slug"
+                    - { property: "width", format: "%d" }
+                    - { property: "height", format: "%d" }
+                    - { property: "image", type: "image", base_path: "/img/" }
+
+
+
 

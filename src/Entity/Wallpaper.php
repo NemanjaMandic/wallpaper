@@ -111,6 +111,16 @@ class Wallpaper
     public function setCategory(Category $category): void
     {
         $this->category = $category;
+
+    }
+
+    public function getImage(){
+        return $this->filename;
+    }
+
+    public function __toString()
+    {
+        return $this->filename;
     }
 
 
